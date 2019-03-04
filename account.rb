@@ -13,4 +13,11 @@ class Account
     def pin_error
       "Access denied: incorrect PIN."
     end
+  
+    public
+    def display_balance(pin_number)
+      isValidPin = pin_number === @pin
+      
+      puts isValidPin ? "Balance: $#{@balance}" : pin_error
+    end
   end
